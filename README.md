@@ -24,7 +24,7 @@ folder challenge3FirstSpringBootApp
 
 mvn clean install
 
-* 3) Executar a extensão .jar por linha de comando, adicionando a função que será executada conforme informações abaixo:
+* 3) Executar a extensão .jar por linha de comando, adicionando a função que será executada conforme informações abaixo
 
 java -jar challenge3FirstSpringBootApp-0.0.1-SNAPSHOT.jar set chave:valor
 

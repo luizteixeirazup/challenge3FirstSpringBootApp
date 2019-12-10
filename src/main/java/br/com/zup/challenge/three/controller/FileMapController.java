@@ -20,9 +20,8 @@ public class FileMapController{
 			if (args[0].equals("get")) {
 				service.get(args[1]);
 			} else if (args[0].equals("set")) {			
-				String line = args[1];
-				String key = line.substring(0, line.indexOf(":"));
-				String value = line.substring(line.indexOf(":") + 1,line.length());
+				String key = args[1].substring(0, args[1].indexOf(":"));
+				String value = args[1].substring(args[1].indexOf(":") + 1,args[1].length());
 				
 				service.set(key, value);
 			} else if (args[0].equals("delete")) {
