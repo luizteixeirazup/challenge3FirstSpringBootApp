@@ -12,19 +12,19 @@ import br.com.zup.challenge.three.repository.FileMapRepository;
 
 @Component
 public class FileMapService {
-	
+
 	@Autowired
 	private FileMapRepository repository;
-	
+
 	private Map<String, String> values;
-	
+
 	private String pathName = "C:\\Users\\Luiz Guilherme\\Desktop\\Root\\File1.txt";
-	
+
 	public FileMapService(FileMapRepository repository) throws IOException {
 		values = repository.readFile(pathName);
 		this.repository = repository;
 	}
-	
+
 	public void get(String key) {
 		System.out.println(values.get(key));
 	}

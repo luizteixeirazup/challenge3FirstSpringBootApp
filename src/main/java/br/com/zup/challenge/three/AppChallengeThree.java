@@ -9,20 +9,16 @@ import br.com.zup.challenge.three.controller.FileMapController;
 
 @SpringBootApplication
 public class AppChallengeThree implements CommandLineRunner {
-	
+
 	public static void main(String[] args) {
 		SpringApplication.run(AppChallengeThree.class, args);
 	}
 
 	@Autowired
 	private FileMapController controller;
-	
+
 	@Override
 	public void run(String... args) throws Exception {
-		controller.run(args);	
+		controller.run(args);
 	}
-	
-
-	
-	
 }
