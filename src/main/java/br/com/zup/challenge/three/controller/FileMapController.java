@@ -9,24 +9,21 @@ import br.com.zup.challenge.three.service.FileMapService;
 public class FileMapController {
 
 	@Autowired
-	private FileMapService service;
-
-//	FileMapRepository repository = new FileMapRepository();
-//	service = new FileMapService(repository);
+	private FileMapService fileMapService;
 
 	public void run(String... args) {
 		try {
 			if (args[0].equals("get")) {
-				service.get(args[1]);
+				fileMapService.get(args[1]);
 			} else if (args[0].equals("set")) {
 				String key = args[1].substring(0, args[1].indexOf(":"));
 				String value = args[1].substring(args[1].indexOf(":") + 1,args[1].length());
 
-				service.set(key, value);
+				fileMapService.set(key, value);
 			} else if (args[0].equals("delete")) {
-				service.delete(args[1]);
+				fileMapService.delete(args[1]);
 			} else if (args[0].equals("list")) {
-				service.list();
+				fileMapService.list();
 			} else {
 				System.out.println("Função não encontrada!");
 			}

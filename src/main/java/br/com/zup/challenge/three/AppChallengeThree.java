@@ -15,10 +15,10 @@ public class AppChallengeThree implements CommandLineRunner {
 	}
 
 	@Autowired
-	private FileMapController controller;
+	private FileMapController fileMapController;
 
 	@Override
 	public void run(String... args) throws Exception {
-		controller.run(args);
+		fileMapController.run(args);
 	}
 }
